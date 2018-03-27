@@ -15,18 +15,18 @@ This library requires the 'gmp', and cURL extensions for PHP. To enable these ex
 
 ### Installation
 
-Clone the project or download it and copy it to your main direction(Example: /var/www/html/).
+Clone the project or download it and copy it to your main direction ```(Example: /var/www/html/).```
 * ``` git clone https://github.com/jonasess/Stellarswap ```
 
 ### Usage:
 
 Sent up the data base tables ...
 
-Set up your database connection in this directory include/dbconnection.php
+Set up your database connection in this directory ``` include/dbconnection.php ```
 
 Run ..
 ### Add new Stellar token:
-1. Add the logo of the asset in the direction logo/
+1. Add the logo of the asset in the direction ``` logo/asset.png ```
 
 2. Add the information of your asset in the file stellarSwap-assetTokens.js
 * Example:
