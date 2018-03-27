@@ -26,7 +26,7 @@ Set up your database connection in this directory ``` include/dbconnection.php `
 
 Run ..
 ### Add new Stellar token:
-1. Add the logo of the asset in the direction ``` logo/asset.png ```
+1. Add the logo of the asset in the direction ``` logo/... ```
 
 2. Add the information of your asset in the file stellarSwap-assetTokens.js
 * Example:
