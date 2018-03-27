@@ -4,7 +4,9 @@ developed by Graichi Younes.
 
 ### Requirements
 
-This library requires the 'gmp', and cURL extensions for PHP. To enable these extensions, see:
+This part will be removed in the future since i will no longer support block.io api (i will move to other unlimited choices).
+
+*This library requires the 'gmp', and cURL extensions for PHP. To enable these extensions, see:
    
    [GMP Installation Guide](http://php.net/manual/en/gmp.installation.php)
 
