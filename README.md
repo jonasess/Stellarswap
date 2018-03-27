@@ -16,7 +16,7 @@ This library requires the 'gmp', and cURL extensions for PHP. To enable these ex
 ### Installation
 
 Clone the project or download it and copy it to your main direction(Example: /var/www/html/).
-``` git clone https://github.com/jonasess/Stellarswap ```
+* ``` git clone https://github.com/jonasess/Stellarswap ```
 
 ### Usage:
 
