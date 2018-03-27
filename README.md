@@ -19,7 +19,7 @@ This library requires the 'gmp', and cURL extensions for PHP. To enable these ex
 Clone the project or download it and copy it to your main direction(Example: /var/www/html/).
 git clone 
 
-###Usage:
+### Usage:
 
 Sent up the data base tables ...
 
