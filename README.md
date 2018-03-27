@@ -77,7 +77,7 @@ If you like the project and you want to support me . You can donate:
 
 You can contact me on GitHub or on my email address jonasess@gmail.com / younes.graichi.93@gmail.com .
 
-## StellarSwap screenshots from localhost
+## StellarSwap screenshots
 
 ### Main page create stellar wallet
 ![Orderbook](https://raw.githubusercontent.com/jonasess/Stellarswap/master/screenshots/index.png)
