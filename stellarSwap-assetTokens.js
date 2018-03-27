@@ -1,0 +1,83 @@
+
+var allassets =[
+[  'anclax.com',
+  'logo/anclax.com.png',
+  'COP',
+  'GAEDLNMCQZOSLY7Y4NW3DTEWQEVVCXYYMBDNGPPGBMQH4GFYECBI7YVK'
+],[
+  'charnatoken.top',
+  'logo/charnatoken.top.png',
+  'CHRC',
+  'GBRPTWEZTUKYM6VJXLHXBFI23M2GSY3TCVIQSZKFQLMOJXH7VPDGKBDP'
+],[
+  'coins.asia',
+  'logo/coins.asia.png',
+  'PHP',
+  'GBUQWP3BOUZX34TOND2QV7QQ7K7VJTG6VSE7WMLBTMDJLLAW7YKGU6EP'
+],[
+  'collective21.org',
+  'logo/collective21.org.png',
+  'SEED',
+  'GDPFSEBZO2W4TLWZO7FIMMG3QONHXYVF6LUULI6HUJS6PJLE4TRZEXLF'
+],[
+  'equid.co',
+  'logo/equid.co.png',
+  'EQD',
+  'GCGEQJR3E5BVMQYSNCHPO6NPP3KOT4VVZHIOLSRSNLE2GFY7EWVSLLTN'
+],[
+  'liquido.i-server.org',
+  'logo/liquido.i-server.org.png',
+  'XLQ',
+  'GD2RRX6BKVTORZ6RIMBLWFVUOAYOLTS2QFJQUQPXLI3PBHR3TMLQNGZX'
+],[
+  'mobius.network',
+  'logo/mobius.network.png',
+  'MOBI',
+  'GA6HCMBLTZS5VYYBCATRBRZ3BZJMAFUDKYYF6AH6MVCMGWMRDNSWJPIH'
+],[
+  'ripplefox.com',
+  'logo/ripplefox.com.png',
+  'CNY',
+  'GAREELUB43IRHWEASCFBLKHURCGMHE5IF6XSE7EXDLACYHGRHM43RFOX'
+],[
+  'smartlands.io',
+  'logo/smartlands.io.png',
+  'SLT',
+  'GCKA6K5PCQ6PNF5RQBF7PQDJWRHO6UOGFMRLK3DYHDOI244V47XKQ4GP'
+],[
+  'stemchain.io',
+  'logo/stemchain.io.png',
+  'STEM',
+  'GAFXX2VJE2EGLLY3EFA2BQXJADAZTNR7NC7IJ6LFYPSCLE7AI3AK3B3M'
+],[
+  'stronghold',
+  'logo/stronghold.co.png',
+  'ETH',
+  'GBSTRH4QOTWNSVA6E4HFERETX4ZLSR3CIUBLK7AXYII277PFJC4BBYOG'
+],[
+  'apay.io',
+  'logo/papayame.com.png',
+  'BCH',
+  'GAEGOS7I6TYZSVHPSN76RSPIVL3SELATXZWLFO4DIAFYJF7MPAHFE7H4'
+],[
+  'sureremit.co',
+  'logo/sureremit.co.png',
+  'RMT',
+  'GCVWTTPADC5YB5AYDKJCTUYSCJ7RKPGE4HT75NIZOUM4L7VRTS5EKLFN'
+],[
+  'tempo.eu.com',
+  'logo/tempo.eu.com.png',
+  'EURT',
+  'GAP5LETOV6YIE62YAM56STDANPRDO7ZFDBGSNHJQIYGGKSMOZAHOOS2S'
+],[
+  'vcbear.net',
+  'logo/vcbear.net.png',
+  'XRP',
+  'GA7FCCMTTSUIC37PODEL6EOOSPDRILP6OQI5FWCWDDVDBLJV72W6RINZ'
+],[
+  'xirkle.com',
+  'logo/xirkle.com.png',
+  'XIR',
+  'GAO4DADCRAHA35GD6J3KUNOB5ELZE5D6CGPSJX2WBMEQV7R2M4PGKJL5'
+]
+];  

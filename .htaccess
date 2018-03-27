@@ -1,0 +1,24 @@
+# Apache Rewrite Rules
+<IfModule mod_rewrite.c>
+RewriteEngine On
+# Serve correct encoding type.
+RewriteBase /
+RewriteCond %{REQUEST_METHOD} !POST [NC]
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s([^.]+)\.php [NC]
+RewriteRule ^ %1 [R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*?)/?$ $1.php [NC,L]
+ </IfModule>
+	   
+	   
+	   
+	   
+	#   	  <IfModule mod_rewrite.c>
+ # RewriteEngine On
+#RewriteCond %{REQUEST_FILENAME}.php -f
+#RewriteRule (.*) $1.php [L]
+#RewriteCond %{REQUEST_FILENAME}.html -f
+#RewriteRule (.*) $1.html [L]
+ #</IfModule>
+	   

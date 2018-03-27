@@ -1,0 +1,12 @@
+  /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
+
+.wrapper {
+  padding: 50px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  background: #fff;
+}
+
+#canvas {
+  display: block;
+  margin: 0 auto;
+}
