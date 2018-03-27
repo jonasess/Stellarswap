@@ -64,6 +64,7 @@ Giving the ability to create wallet, send and receive payments, exchange vs coin
 1. For stellarswap account reset the password function is not working (under maintenance).
 2. History of Stellar trades is under maintenance.
 3. There's no History exchanges of coins yet, i will add it soon.
+4. One fike is missing ```(stellarSwap-tradecoinvstoken.php)``` it's under maintenance for security purpose.
 
 ### Support me:
 If you like the project and you want to support me . You can donate:
