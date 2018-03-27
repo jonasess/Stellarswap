@@ -17,7 +17,7 @@ This library requires the 'gmp', and cURL extensions for PHP. To enable these ex
 ### Installation
 
 Clone the project or download it and copy it to your main direction(Example: /var/www/html/).
-git clone 
+git clone https://github.com/jonasess/Stellarswap
 
 ### Usage:
 
@@ -30,7 +30,7 @@ Run ..
 1. Add the logo of the asset in the direction logo/
 
 2. Add the information of your asset in the file stellarSwap-assetTokens.js
-Example:
+* Example:
 ```
 [
   'Asset-website',
@@ -40,8 +40,8 @@ Example:
 ],
 ```
 
-3/Do the same step in the file stellarSwap-assetTokens.php , add your asset information in the $asset_tokes array .
-Example
+3. Do the same step in the file stellarSwap-assetTokens.php , add your asset information in the $asset_tokes array .
+* Example
 ```
 array("domain"=>"your-domain-name","logo"=>"Asset-logo-direction","code"=>"Asset code","issuer"=>"Asset issuer id"),
 ```
@@ -68,9 +68,9 @@ Giving the ability to create wallet, send and receive payments, exchange vs coin
 
 ### Support me:
 If you like the project and you want to support me . You can donate:
-Stellar wallet:``` GDI4HFEIZIPUGMXL7MM5BXRAJKC76XU2EDSS6GML2PL7MBTG6GICUYS3 ```
-BTC wallet:``` 1PD1UBxTajiHEa4oDZex6QN6UT4aRxCDsM ```
-ETH wallet:``` 0x083c01b98810e17b0b6cce27cb1cb37a6a40e4eb ```
-LTC wallet:``` LQ3fQoLJkW7hwuPdWtcPa5YYtAvmsp7UCs ```
+* Stellar wallet:``` GDI4HFEIZIPUGMXL7MM5BXRAJKC76XU2EDSS6GML2PL7MBTG6GICUYS3 ```
+* BTC wallet:``` 1PD1UBxTajiHEa4oDZex6QN6UT4aRxCDsM ```
+* ETH wallet:``` 0x083c01b98810e17b0b6cce27cb1cb37a6a40e4eb ```
+* LTC wallet:``` LQ3fQoLJkW7hwuPdWtcPa5YYtAvmsp7UCs ```
 
 You can contact me on GitHub or on my email address jonasess@gmail.com / younes.graichi.93@gmail.com .
