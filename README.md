@@ -94,7 +94,7 @@ You can contact me on GitHub or on my email address jonasess@gmail.com / younes.
 ### Ability to add trust either from a curated list, manually, or via federation
 ![Orderbook](https://raw.githubusercontent.com/jonasess/Stellarswap/master/screenshots/trustline.png)
 
-### Check the assets prices and choose the trading pair
+### Check assets prices and choose the trading pair
 ![Orderbook](https://raw.githubusercontent.com/jonasess/Stellarswap/master/screenshots/market.png)
 
 ### Price history charts
