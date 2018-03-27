@@ -76,3 +76,37 @@ If you like the project and you want to support me . You can donate:
 * LTC wallet:``` LQ3fQoLJkW7hwuPdWtcPa5YYtAvmsp7UCs ```
 
 You can contact me on GitHub or on my email address jonasess@gmail.com / younes.graichi.93@gmail.com .
+
+## StellarSwap screenshots from localhost
+
+### Main page create stellar wallet
+![Orderbook](https://raw.githubusercontent.com/jonasess/Stellarswap/master/screenshots/index.png)
+
+### Create stellarswap wallet (contains stellarswallet and other wallets such as BTC, LTC ...etc)
+![Orderbook](https://raw.githubusercontent.com/jonasess/Stellarswap/master/screenshots/createSWaccount.png)
+
+### Check wallet ids and balances
+![Orderbook](https://raw.githubusercontent.com/jonasess/Stellarswap/master/screenshots/SwAccountwallet.png)
+
+### Send payments (assets && coins) to other wallets
+![Orderbook](https://raw.githubusercontent.com/jonasess/Stellarswap/master/screenshots/sendpayments.png)
+
+### Ability to add trust either from a curated list, manually, or via federation
+![Orderbook](https://raw.githubusercontent.com/jonasess/Stellarswap/master/screenshots/trustline.png)
+
+### Check the assets prices and choose the trading pair
+![Orderbook](https://raw.githubusercontent.com/jonasess/Stellarswap/master/screenshots/market.png)
+
+### Price history charts
+![Orderbook](https://raw.githubusercontent.com/jonasess/Stellarswap/master/screenshots/chart.png)
+
+### Ability to make offers (sell or buy)
+![Orderbook](https://raw.githubusercontent.com/jonasess/Stellarswap/master/screenshots/buyandsell.png)
+
+### Ability to cancel offers (sell or buy)
+![Orderbook](https://raw.githubusercontent.com/jonasess/Stellarswap/master/screenshots/canceloffer.png)
+
+### Checking available offers (sell and buy)
+![Orderbook](https://raw.githubusercontent.com/jonasess/Stellarswap/master/screenshots/sellandbuyoffers.png)
+
+# And more && more other options ...
