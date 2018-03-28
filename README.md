@@ -67,6 +67,7 @@ Giving the ability to create wallet, send and receive payments, exchange vs coin
 2. History of Stellar trades is under maintenance.
 3. There's no History exchanges of coins yet, i will add it soon.
 4. One file is missing ```(stellarSwap-tradecoinvstoken.php)``` it's under maintenance for security purpose. contains a lot of mistakes.
+5/passwords are saved without encrypt . i will add it soon.
 
 ### Support me:
 If you like the project and you want to support me . You can donate:
