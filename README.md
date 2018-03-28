@@ -2,7 +2,7 @@
 Stellarswap is a global exchange board for all Stellar token and cryptocurrencies (coins). Easy sign up, easy trading.
 developed by Graichi Younes.
 
-### Requirements (if you are using lunix)
+### Requirements (if you are using linux)
 
 This part will be removed in the future since i will no longer support block.io api (i will move to other unlimited choices).
 
