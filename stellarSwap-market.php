@@ -4,7 +4,7 @@
 	include("stellarSwap-assetTokens.php");
 	//echo $_SESSION["secretkey"];
 	
-	/*	//$json_string = 'https://horizon.stellar.org/accounts/GBRPTWEZTUKYM6VJXLHXBFI23M2GSY3TCVIQSZKFQLMOJXH7VPDGKBDP';
+	/*	//$json_string = 'https://horizon.stellar.org/accounts/GCUGWY3AHEBUKPRDDZ66OMFSQ4APXQUQ4ZZOHEQYLWB7KJK72UQBCYU2';
 			$json_string ='https://horizon.stellar.org/order_book?selling_asset_type=native&buying_asset_type=credit_alphanum4&buying_asset_code=CHRC&buying_asset_issuer=GBRPTWEZTUKYM6VJXLHXBFI23M2GSY3TCVIQSZKFQLMOJXH7VPDGKBDP&limit=1';
 			$jsondata = file_get_contents($json_string);
 			$obj = json_decode($jsondata,true);
@@ -222,30 +222,50 @@ async function loadpricesoftoken()	{
 		 // var assetissuer = document.getElementById("issuer"+i).textContent; if you want to use this one remove substr from php
 			var assetcode = document.getElementById("code"+i).textContent;
 			var assetissuer = document.getElementById("issuerr"+i).value;
+		if(assetissuer=="native"){
+			document.getElementById("bids"+i).textContent="XLM native";
+			document.getElementById("asks"+i).textContent="XLM native";
+		}else{
 		 await server.orderbook(new StellarSdk.Asset.native(), new StellarSdk.Asset(assetcode, assetissuer)).limit(1).order("desc")
 		  .call()
 		  .then(function(resp) {
 		  //bids
-		   var priceinXLM=resp["bids"][0]["price"];
-		  var assetamount=resp["bids"][0]["amount"];
-		  var XLManount=assetamount/priceinXLM;
-		 var finalpriceASK=XLManount/assetamount;
-			 //console.log("bids"+finalpriceASK+" XLM");
+			if(resp["bids"].length==0){
+			  // var priceinXLM=0;
+			  //var assetamount=0;
+			  //var XLManount=assetamount/priceinXLM;
+				 document.getElementById("bids"+i).textContent="No bids yet";
+			}else{
+				var priceinXLM=resp["bids"][0]["price"];
+			  var assetamount=resp["bids"][0]["amount"];
+			  var XLManount=assetamount/priceinXLM;
+			 var finalpriceASK=XLManount/assetamount;
 			 var finalpriceASKstr=finalpriceASK+"";
-			 document.getElementById("bids"+i).textContent= Number(finalpriceASKstr).toFixed(6)+" XLM";
-			 //asks
-			  var priceinXLM2=resp["asks"][0]["price"];
-		  var assetamount2=resp["asks"][0]["amount"];
-		  var XLManount2=assetamount2/priceinXLM2;
-		 var finalpriceASK2=XLManount2/assetamount2;
-		 var finalpriceASKstr2=finalpriceASK2+"";
-		 document.getElementById("asks"+i).textContent=Number(finalpriceASKstr2).toFixed(6)+" XLM";
-			 //console.log("asks"+finalpriceASK2+" XLM");
-			  //console.log("hello tage "+i+" XLM");
-		   return resp;
-		  
+				 document.getElementById("bids"+i).textContent= Number(finalpriceASKstr).toFixed(6)+" XLM";
+			}
+			  
+				 //console.log("bids"+finalpriceASK+" XLM");
+				 
+				 //asks
+			if(resp["asks"].length==0){
+			 document.getElementById("asks"+i).textContent="No asks yet";
+			}else{	 
+			 var priceinXLM2=resp["asks"][0]["price"];
+			  var assetamount2=resp["asks"][0]["amount"];
+			  var XLManount2=assetamount2/priceinXLM2;
+			 var finalpriceASK2=XLManount2/assetamount2;
+			 var finalpriceASKstr2=finalpriceASK2+"";
+			 document.getElementById("asks"+i).textContent=Number(finalpriceASKstr2).toFixed(6)+" XLM";
+			}
+			  
+			 
+				 //console.log("asks"+finalpriceASK2+" XLM");
+				  //console.log("hello tage "+i+" XLM");
+			   return resp;
+			  
 		  //console.log(resp["bids"][0]["price"]);
 		  })
+	}
 	
 	}
 }
