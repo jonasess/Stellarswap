@@ -14,6 +14,7 @@ error_reporting(E_ERROR | E_PARSE);
   $asset_tokes = array
   (
   array("domain"=>"anclax.com","logo"=>"logo/anclax.com.png","code"=>"COP","issuer"=>"GAEDLNMCQZOSLY7Y4NW3DTEWQEVVCXYYMBDNGPPGBMQH4GFYECBI7YVK"),
+  array("domain"=>"socialbuzz.space","logo"=>"logo/socialbuzz.space.png","code"=>"SOCB","issuer"=>"GBUZZT7RB6NU5HUKQ44G4FYD5VLPQUE7NN2Q4AGBMNOLJ44YXUHMWUIZ"),
   array("domain"=>"charnatoken.top","logo"=>"logo/charnatoken.top.png","code"=>"CHRC","issuer"=>"GBRPTWEZTUKYM6VJXLHXBFI23M2GSY3TCVIQSZKFQLMOJXH7VPDGKBDP"),
   array("domain"=>"coins.asia","logo"=>"logo/coins.asia.png","code"=>"PHP","issuer"=>"GBUQWP3BOUZX34TOND2QV7QQ7K7VJTG6VSE7WMLBTMDJLLAW7YKGU6EP"),
   array("domain"=>"collective21.org","logo"=>"logo/collective21.org.png","code"=>"SEED","issuer"=>"GDPFSEBZO2W4TLWZO7FIMMG3QONHXYVF6LUULI6HUJS6PJLE4TRZEXLF"),
