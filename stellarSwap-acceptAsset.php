@@ -311,7 +311,7 @@ function trustassetbtn(clicked_id) {
 		
 		 var assetcode = document.getElementById("code"+clicked_id).textContent;
 		  var assetissuer = document.getElementById("issuer"+clicked_id).textContent;
-		   var amount = "9000000";
+		   var amount = "9000000000";
 		   //alert(clicked_id);
 		   //alert(assetcode);
 		   //alert(assetissuer);
