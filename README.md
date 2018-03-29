@@ -2,7 +2,7 @@
 Stellarswap is a global exchange board for all Stellar token and cryptocurrencies (coins). Easy sign up, easy trading.
 developed by Graichi Younes.
 
-### Requirements
+### Requirements (if you are using linux)
 
 This part will be removed in the future since i will no longer support block.io api (i will move to other unlimited choices).
 
@@ -66,7 +66,8 @@ Giving the ability to create wallet, send and receive payments, exchange vs coin
 1. For stellarswap account reset the password function is not working (under maintenance).
 2. History of Stellar trades is under maintenance.
 3. There's no History exchanges of coins yet, i will add it soon.
-4. One fike is missing ```(stellarSwap-tradecoinvstoken.php)``` it's under maintenance for security purpose.
+4. One file is missing ```(stellarSwap-tradecoinvstoken.php)``` it's under maintenance for security purpose. contains a lot of mistakes.
+5/passwords are saved without encrypt . i will add it soon.
 
 ### Support me:
 If you like the project and you want to support me . You can donate:
@@ -76,3 +77,37 @@ If you like the project and you want to support me . You can donate:
 * LTC wallet:``` LQ3fQoLJkW7hwuPdWtcPa5YYtAvmsp7UCs ```
 
 You can contact me on GitHub or on my email address jonasess@gmail.com / younes.graichi.93@gmail.com .
+
+## StellarSwap screenshots
+
+### Main page create stellar wallet
+![Orderbook](https://raw.githubusercontent.com/jonasess/Stellarswap/master/screenshots/index.png)
+
+### Create stellarswap wallet (contains stellarswallet and other wallets such as BTC, LTC ...etc)
+![Orderbook](https://raw.githubusercontent.com/jonasess/Stellarswap/master/screenshots/createSWaccount.png)
+
+### Check wallet ids and balances
+![Orderbook](https://raw.githubusercontent.com/jonasess/Stellarswap/master/screenshots/SwAccountwallet.png)
+
+### Send payments (assets && coins) to other wallets
+![Orderbook](https://raw.githubusercontent.com/jonasess/Stellarswap/master/screenshots/sendpayments.png)
+
+### Ability to add trust either from a curated list, manually, or via federation
+![Orderbook](https://raw.githubusercontent.com/jonasess/Stellarswap/master/screenshots/trustline.png)
+
+### Check assets prices and choose the trading pair
+![Orderbook](https://raw.githubusercontent.com/jonasess/Stellarswap/master/screenshots/market.png)
+
+### Price history charts
+![Orderbook](https://raw.githubusercontent.com/jonasess/Stellarswap/master/screenshots/chart.png)
+
+### Ability to make offers (sell or buy)
+![Orderbook](https://raw.githubusercontent.com/jonasess/Stellarswap/master/screenshots/buyandsell.png)
+
+### Ability to cancel offers (sell or buy)
+![Orderbook](https://raw.githubusercontent.com/jonasess/Stellarswap/master/screenshots/canceloffer.png)
+
+### Checking available offers (sell and buy)
+![Orderbook](https://raw.githubusercontent.com/jonasess/Stellarswap/master/screenshots/sellandbuyoffers.png)
+
+# And more && more other options ...
