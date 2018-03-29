@@ -234,7 +234,7 @@ async function loadpricesoftoken()	{
 			  // var priceinXLM=0;
 			  //var assetamount=0;
 			  //var XLManount=assetamount/priceinXLM;
-				 document.getElementById("bids"+i).textContent="No bids yet";
+				 document.getElementById("bids"+i).textContent="No asks yet";
 			}else{
 				var priceinXLM=resp["bids"][0]["price"];
 			  var assetamount=resp["bids"][0]["amount"];
@@ -248,7 +248,7 @@ async function loadpricesoftoken()	{
 				 
 				 //asks
 			if(resp["asks"].length==0){
-			 document.getElementById("asks"+i).textContent="No asks yet";
+			 document.getElementById("asks"+i).textContent="No bids yet";
 			}else{	 
 			 var priceinXLM2=resp["asks"][0]["price"];
 			  var assetamount2=resp["asks"][0]["amount"];
