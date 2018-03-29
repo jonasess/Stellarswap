@@ -5,6 +5,11 @@ var allassets =[
   'COP',
   'GAEDLNMCQZOSLY7Y4NW3DTEWQEVVCXYYMBDNGPPGBMQH4GFYECBI7YVK'
 ],[
+  'socialbuzz.space',
+  'logo/socialbuzz.space.png',
+  'SOCB',
+  'GBUZZT7RB6NU5HUKQ44G4FYD5VLPQUE7NN2Q4AGBMNOLJ44YXUHMWUIZ'
+],[
   'charnatoken.top',
   'logo/charnatoken.top.png',
   'CHRC',
