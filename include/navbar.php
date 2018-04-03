@@ -26,12 +26,12 @@
 			</header>
 			<p>Have an issues? or you want to list your asset on Stellarswap? contact us.</p>
 			<ul class="contact">
-				<li class="fa-envelope-o">dev@stellarswap.space</li>
+				<li class="fa-envelope-o">jonasess@gmail.com</li>
 			</ul>
 		</section>
 		<!-- Footer -->
 		<footer id="footer">
-			<p class="copyright">&copy; Stellarswap</p>
+			<p class="copyright">&copy; Stellarswap founded and devaloped by Graichi Younes. Contact me: <a>jonasess@gmail.com</a> or <a>younes.graichi.93@gmail.com</a></p>
 		</footer>
 
 	</div>
