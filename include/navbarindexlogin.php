@@ -16,6 +16,8 @@
 						<li><a href="stellarSwap-login-account.php">Log in with SW</a></li>
 						<li><a href="stellarSwap-aboutswaccount.php">What's SW account?</a></li>
 					</ul>
+				<li><a href="stellarSwap-policy.php">Privacy Policy</a></li>
+				<li><a href="stellarSwap-terms.php">Terms</a></li>	
 				</li>
 			</ul>
 		</nav>
@@ -26,12 +28,12 @@
 			</header>
 			<p>Have an issues? or you want to list your asset on Stellarswap? contact us.</p>
 			<ul class="contact">
-				<li class="fa-envelope-o">jonasess@gmail.com</li>
+				<li class="fa-envelope-o">dev@stellarswap.space</li>
 			</ul>
 		</section>
 		<!-- Footer -->
 		<footer id="footer">
-			<p class="copyright">&copy; Stellarswap founded and devaloped by Graichi Younes. Contact me: <a>jonasess@gmail.com</a> or <a>younes.graichi.93@gmail.com</a></p>
+			<p class="copyright">&copy; Stellarswap.</p>
 		</footer>
 
 	</div>
