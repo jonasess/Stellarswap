@@ -93,7 +93,8 @@ function gotonewwallet(){
 	window.location.replace("stellarSwap-signin-account.php");
 }
 function forgotpassword(){
-	alert("under maintenance . it will be available soon...")
+	window.location.replace("stellarSwap-resetpassword.php");
+	//alert("under maintenance . it will be available soon...")
 }
 
 </script>
