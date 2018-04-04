@@ -22,7 +22,7 @@ Clone the project or download it and copy it to your main direction ```(Example:
 
 ### Configuration:
 
-Set up the configuration of your server email (to enable users reset password) in this file ``` stellarSwap-confresetpassword.php ```
+Set up the configuration of your email server (to enable users reset password) in this file ``` stellarSwap-confresetpassword.php ```
 * Check the link
 * ``` https://github.com/jonasess/Stellarswap/blob/master/stellarSwap-confresetpassword.php#L41 ```
 
