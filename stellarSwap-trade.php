@@ -315,7 +315,7 @@ var server = new StellarSdk.Server('https://horizon.stellar.org');
 var table = document.getElementById('alltrads');
     for (var r = 0; r<15 ; r++) {
         //for (var c = 0, m = table.rows[r].cells.length; c < m; c++) {
-            if(r<table.rows.length){
+            if(r+1<table.rows.length){
 				databids[r]=table.rows[r+1].cells[2].innerHTML;
 				datalabs[r]="";
 			}
