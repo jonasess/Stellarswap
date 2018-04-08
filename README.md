@@ -20,6 +20,12 @@ This part will be removed in the future since i will no longer support block.io 
 Clone the project or download it and copy it to your main direction ```(Example: /var/www/html/).```
 * ``` git clone https://github.com/jonasess/Stellarswap ```
 
+### Configuration:
+
+Set up the configuration of your email server (to enable users reset password) in this file ``` stellarSwap-confresetpassword.php ```
+* Check the link
+* ``` https://github.com/jonasess/Stellarswap/blob/master/stellarSwap-confresetpassword.php#L41 ```
+
 ### Usage:
 
 Sent up the data base tables ...
@@ -63,11 +69,10 @@ Giving the ability to create wallet, send and receive payments, exchange vs coin
 3. Add more security to the board.
 
 ### Warning:
-1. For stellarswap account reset the password function is not working (under maintenance).
-2. History of Stellar trades is under maintenance.
-3. There's no History exchanges of coins yet, i will add it soon.
-4. One file is missing ```(stellarSwap-tradecoinvstoken.php)``` it's under maintenance for security purpose. contains a lot of mistakes.
-5/passwords are saved without encrypt . i will add it soon.
+1. History of Stellar trades is under maintenance.
+2. There's no History exchanges of coins yet, i will add it soon.
+3. One file is missing ```(stellarSwap-tradecoinvstoken.php)``` it's under maintenance for security purpose. contains a lot of mistakes.
+4.passwords are saved without encrypt . Need to be encrypted.
 
 ### Support me:
 If you like the project and you want to support me . You can donate:
