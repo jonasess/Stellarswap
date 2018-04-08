@@ -287,7 +287,7 @@ var server = new StellarSdk.Server('https://horizon.stellar.org');
 					row.onclick = function() {setpricetoboardsell();};
 					row.setAttribute('id','s'+i);
 					
-					//hiden element contain the price 
+					//Hiden element contain the price 
 					var xhideprices = document.createElement("INPUT");
 						xhideprices.setAttribute("type", "hidden");
 						xhideprices.setAttribute("id", "inps"+i);
