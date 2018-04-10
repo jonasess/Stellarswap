@@ -2,17 +2,17 @@
 function initconnectionrpc($coincode){
 if($coincode=="BTC"){ 
 	//bitcoin
-	$coinrpcuser='shamim';
-	$coinrpcpassword='shamimbitcoin$$';
-	$coinrpcip='195.201.158.189';
-	$coinrpcport='8332';
+	$coinrpcuser='rpcuser';
+	$coinrpcpassword='rpcpassworf';
+	$coinrpcip='ip address where daemon is running';
+	$coinrpcport='rpcport';
 }else{
 	//galaxycash
 	if($coincode=="GCH"){
-	$coinrpcuser='galaxycashcrypto';
-	$coinrpcpassword='galaxycashcrypto22ptoexchange$$';
-	$coinrpcip='195.201.158.189';
-	$coinrpcport='7676';
+	$coinrpcuser='rpcuser';
+	$coinrpcpassword='rpcpassworf';
+	$coinrpcip='ip address where daemon is running';
+	$coinrpcport='rpcport';
 	}
 	}
 	$coinconnectionrpc = new Bitcoin($coinrpcuser,$coinrpcpassword,$coinrpcip,$coinrpcport);
@@ -21,11 +21,11 @@ if($coincode=="BTC"){
 function getpassphrase($coincode){
 	if($coincode=="BTC"){ 
 	//bitcoin
-	$passphrase='...';
+	$passphrase='your passphrase';
 }else{
 	//galaxycash
 	if($coincode=="GCH"){
-	$passphrase='test test';
+	$passphrase='your passphrase';
 	}
 	}
 	return $passphrase;
