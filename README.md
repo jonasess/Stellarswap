@@ -4,16 +4,9 @@ developed by Graichi Younes.
 
 ### Requirements (if you are using linux)
 
-This part will be removed in the future since i will no longer support block.io api (i will move to other unlimited choices).
-
-*This library requires the 'gmp', and cURL extensions for PHP. To enable these extensions, see:
-   
-   [GMP Installation Guide](http://php.net/manual/en/gmp.installation.php)
+*This library requires the cURL extensions for PHP. To enable this extension, see:
 
    [cURL Installation Guide](http://php.net/manual/en/curl.installation.php)
-   
-[Also check Block.io on how for more information.](https://github.com/BlockIo/block_io-php)
-
 
 ### Installation
 
@@ -57,21 +50,20 @@ And congratulations your asset has been added to the board for the trading.
 
 ### Add new cryptocurrency (coin):
 Details soon.
-Hint you need to use api or daemons.
+Hint you need to use rpc to connect to daemons.
 
 ### Note:
-Stellarswap use the api from block.io to support 3 coins (BTC, LTC and DOGE).
+Stellarswap uses the rpc to connect to daemon to support any coin (BTC, GCH ...etc).
 Giving the ability to create wallet, send and receive payments, exchange vs coins or tokens (stellar tokens) ... etc .
 
 ### Goals:
-1. block.io api is limited, one of the goals is to change it and connect the board to daemon file of BTC or any other coin to give more control and unlimited usage.
-2. Support more coins and tokens.
-3. Add more security to the board.
+1. Support more coins and tokens.
+2. Add more security to the board.
 
 ### Warning:
 1. History of Stellar trades is under maintenance.
 2. There's no History exchanges of coins yet, i will add it soon.
-3. One file is missing ```(stellarSwap-tradecoinvstoken.php)``` it's under maintenance for security purpose. contains a lot of mistakes.
+3. One file is missing ```(stellarSwap-tradecoinvstoken.php)``` it's under maintenance for security purpose. contains some mistakes.
 4.passwords are saved without encrypt . Need to be encrypted.
 
 ### Support me:
