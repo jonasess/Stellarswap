@@ -50,7 +50,7 @@ header('Location: stellarSwap-wallet.php');
 											<input id="email" type="email"  placeholder="Email (example: example@example.com)" name="email"  required>
 											<br>
 										<label><span>Password: <span class="required">*</span></span>
-											<input id="password" type="password"  placeholder="password" name="password"  required>
+											<input id="secretkey" type="password"  placeholder="password" name="password"  required>
 										</label>
 										<input id="walletaccount" type="hidden" name="walletaccount" value="walletaccount">
 										<label><b id="errormessage"></b></label>
@@ -58,12 +58,11 @@ header('Location: stellarSwap-wallet.php');
 										<input type="submit" value="Log in WS"><br>
 										<input type="button" onclick="gotonewwallet()" value="Create new SW wallet"><br>
 										<input type="button" onclick="forgotpassword()" value="Forgot password?"><br>
-										
 									 </form>
 									 
 									</div>
 									<span class="image object">
-										<img src="images/Stellarswap.png" alt="" />
+										<?php //include("boaranimation/thebear.php")?>
 									</span>
 								</section>
 

@@ -1,21 +1,23 @@
 <?php 
-	error_reporting(E_ERROR | E_PARSE);
+	//error_reporting(E_ERROR | E_PARSE);
 	include("stellarSwap-session.php");
 	include("stellarSwap-assetTokens.php");
 	
 	
 	
 	if(isset($_SESSION["walletaccount"])){
-		if($_SESSION["walletaccount"]=="walletaccount"){
-			include("block_io-php-master/coinoperation.php");
+		if($_SESSION["walletaccount"]=="walletaccount"){			
+			include("include/rpcdaemonpassword.php");
+			require_once('include/easybitcoin.php');
 			if(isset($_POST["walletdesidcoin"])&&isset($_POST["thecoinn"])&&isset($_POST["amountsendcoin"])){
-			
 			$indexofcoin=$_POST["thecoinn"];
-			$results=sendpayment($_SESSION["allcoins"][$indexofcoin]["swbtcapi"],$_SESSION["swpin"],$_SESSION["allcoins"][$indexofcoin]["swcoinkey"],$_POST["walletdesidcoin"],$_POST["amountsendcoin"]);
-			if(substr ( $results , 0 , 6)=="Failed"){
-				$mymessagecoin=$results;
+			$coinsendrpc=initconnectionrpc($_SESSION["allcoins"][$indexofcoin]["code"]);
+			$coinsendrpc->walletpassphrase(getpassphrase($_SESSION["allcoins"][$indexofcoin]["code"]),60);
+		    $results=$coinsendrpc->sendfrom($_SESSION["allcoins"][$indexofcoin]["swcoinkey"],$_POST["walletdesidcoin"],floatval($_POST["amountsendcoin"]));
+			if(!empty($coinsendrpc->error)){
+				$mymessagecoin=$coinsendrpc->error;
 			}else{
-				$mymessagecoin="payment has been sent successfully";
+				 $mymessagecoin="payment has been sent successfully";
 				//$mymessagecoin=$results;
 			}
 			}
@@ -86,12 +88,19 @@
 									</select>
 									<br>
 									</div>
-									<h4><p id="<?php echo "coinamount0"?>"><?php getbalancefromapi($_SESSION["allcoins"][0]["swbtcapi"],$_SESSION["swpin"],$_SESSION["allcoins"][0]["swcoinkey"],1)?></p></h4>
+									<h4><p id="<?php echo "coinamount0"?>"><?php
+											$coinconnectionrpc=initconnectionrpc($_SESSION["allcoins"][0]["code"]);
+											$coinbalance=$coinconnectionrpc->getbalance($coinconnectionrpc->getaccount($_SESSION["allcoins"][0]["swcoinkey"]));
+											echo $coinbalance;
+											// getbalancefromapi($_SESSION["allcoins"][0]["swbtcapi"],$_SESSION["swpin"],$_SESSION["allcoins"][0]["swcoinkey"],1)?></p></h4>
 									<input id="thecoinn" type="hidden" name="thecoinn" value="0">
 									<?php
 										for($allmycoin=1;$allmycoin<sizeof($_SESSION["allcoins"]);$allmycoin++){
 										?>
-									<h4><p id="<?php echo "coinamount".$allmycoin?>" hidden><?php getbalancefromapi($_SESSION["allcoins"][$allmycoin]["swbtcapi"],$_SESSION["swpin"],$_SESSION["allcoins"][$allmycoin]["swcoinkey"],1)?></p></h4>
+									<h4><p id="<?php echo "coinamount".$allmycoin?>" hidden><?php 
+											$coinconnectionrpcrest=initconnectionrpc($_SESSION["allcoins"][$allmycoin]["code"]);
+											$coinbalancerest=$coinconnectionrpcrest->getbalance($coinconnectionrpcrest->getaccount($_SESSION["allcoins"][$allmycoin]["swcoinkey"]));
+											echo $coinbalancerest;//getbalancefromapi($_SESSION["allcoins"][$allmycoin]["swbtcapi"],$_SESSION["swpin"],$_SESSION["allcoins"][$allmycoin]["swcoinkey"],1)?></p></h4>
 									<?php } ?>
 									<h4>Amount: </h4><input type="text" id="amountsendcoin" name="amountsendcoin" required>
 									<br>
@@ -195,7 +204,7 @@
 		
 		}).catch(function (error) {
             // oops, mom don't buy it
-			document.getElementById("assetamount").innerHTML  = "There is a connection problem or your account is not activated yet . check your connection or activate your account by putting 5 XLM in it.";
+			document.getElementById("assetamount").innerHTML  = "Your account is not activated yet . Activate your account by putting 5 XLM in it.";
          // output: 'mom is not happy'
         });
 
@@ -321,7 +330,7 @@ function getassetamount(){
 		
 		}).catch(function (error) {
             // oops, mom don't buy it
-			document.getElementById("assetamount").innerHTML  = "There is a connection problem or your account is not activated yet . check your connection or activate your account by putting 5 XLM in it.";
+			document.getElementById("assetamount").innerHTML  = "Your account is not activated yet . Activate your account by putting 5 XLM in it.";
          // output: 'mom is not happy'
         });
 }

@@ -66,14 +66,20 @@
 								<td><h4>bending balance</h4></td>
 								</tr>
 								<?php if($_SESSION["walletaccount"]=="walletaccount"){
-									include("block_io-php-master/coinoperation.php");
+									include("include/rpcdaemonpassword.php");
+										require_once('include/easybitcoin.php');
 									for($allmycoin=0;$allmycoin<sizeof($_SESSION["allcoins"]);$allmycoin++){
 									?>
 									<tr>
 									<td><img src="<?php echo $_SESSION["allcoins"][$allmycoin]["logo"];?>"width="70" height="70"></td>
 									<td><h4><?php echo $_SESSION["allcoins"][$allmycoin]["code"];?></h4></td>
-									<td><h4><?php getbalancefromapi($_SESSION["allcoins"][$allmycoin]["swbtcapi"],$_SESSION["swpin"],$_SESSION["allcoins"][$allmycoin]["swcoinkey"],1);?></h4></td>
-									<td><h4><?php getbalancefromapi($_SESSION["allcoins"][$allmycoin]["swbtcapi"],$_SESSION["swpin"],$_SESSION["allcoins"][$allmycoin]["swcoinkey"],0);?></h4></td>
+									<td><h4><?php 
+										$coinconnectionrpc=initconnectionrpc($_SESSION["allcoins"][$allmycoin]["code"]);
+										$coinbalance=$coinconnectionrpc->getbalance($coinconnectionrpc->getaccount($_SESSION["allcoins"][$allmycoin]["swcoinkey"]));
+										echo $coinbalance;
+										
+									?></h4></td>
+									<td><h4><?php echo "inder mantenance"?></h4></td>
 									</tr>
 								<?php }
 									}
@@ -253,7 +259,7 @@
 		
 		}).catch(function (error) {
             // oops, mom don't buy it
-			document.getElementById("errormessage").innerHTML  = "There is a connection problem or your account is not activated yet . check your connection or activate your account by putting 5 XLM in it.";
+			document.getElementById("errormessage").innerHTML  = "Your account is not activated yet . Activate your account by putting 5 XLM in it.";
          // output: 'mom is not happy'
         });
 		 

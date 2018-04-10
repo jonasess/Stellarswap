@@ -68,23 +68,31 @@ if(isset($_POST["email"])&&isset($_POST["password"])&&isset($_POST["password2"])
 			/////////////////////////////////////
 				if($exist==false){
 					
-					include("block_io-php-master/apiinfo.php");
-					if($btcarrayofblock->status=="success" && $dogearrayofblock->status=="success" && $litearrayofblock->status=="success"){
-						$btcoinkey=$btcarrayofblock->data->address;
-						$dogecoinkey=$dogearrayofblock->data->address;
-						$litecoinkey=$litearrayofblock->data->address;
-						
-						//sql injection and also try catch of  data
-						
-						
-						//echo " ".$arrayofblock->data->label;
-
+					include("include/rpcdaemonpassword.php");
+					require_once('include/easybitcoin.php');
+					// $bitcoin = new Bitcoin($bitcoinrpcuser,$bitcoinrpcpassword,$bitcoinrpcip,$bitcoinrpcport);
+					//$info1=$bitcoin->getnewaddress("ff");
+					// $btcoinkey=$bitcoin->getnewaddress("bitcoin".$_POST["email"]);
+					$bitcoinconnectionrpc=initconnectionrpc("BTC");
+					$btcoinkey=$bitcoinconnectionrpc->getnewaddress("bitcoin".$_POST["email"]);
+											
+					//print $bitcoin->error;
+					//print_r($info1); 	
+					// echo "<pre>";
+					// print_r($info); 	
+					// echo "</pre>";
+					// $galaxycash = new Bitcoin($galaxycashrpcuser,$galaxycashrpcpassword,$galaxycashrpcip,$galaxycashrpcport);
+					//$info1=$bitcoin->getnewaddress("ff");
+					// $galaxycashkey=$galaxycash->getnewaddress("galaxycash".$_POST["email"]);
+					$galaxycashconnectionrpc=initconnectionrpc("GCH");
+					$galaxycashkey=$galaxycashconnectionrpc->getnewaddress("galaxycash".$_POST["email"]);
+					if(empty($bitcoinconnectionrpc->error) && empty($galaxycashconnectionrpc->error)){
 						if ($stmt = $conn->prepare("INSERT INTO stellarswapusers (swemail,swpassword,swsecretkey,
-								swpublickey,swemailcoin,swbtccoinkey,swdogecoinkey,swlitecoinkey,swbtcapi,swdogeapi,swliteapi,swpin) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)")) {
+								swpublickey,swbtccoinkey,swgalaxycashcoinkey) VALUES (?, ?, ?, ?, ?, ?)")) {
 						 
 							// Bind the variables to the parameter as strings. 
 							//s means string ss means two string .. etc .... protected from sql injection
-							$stmt->bind_param("ssssssssssss", $email, $password, $sek, $pbk, $emailcoin, $btcoinkey, $dogecoinkey, $litecoinkey,$btcapiKey,$dogeapiKey,$liteapiKey,$pin);//
+							$stmt->bind_param("ssssss", $email, $password, $sek, $pbk, $btcoinkey, $galaxycashkey);//
 						 
 							// Execute the statement.
 							if($stmt->execute()){
@@ -100,7 +108,7 @@ if(isset($_POST["email"])&&isset($_POST["password"])&&isset($_POST["password2"])
 						}
 						
 					}else{
-						$errormessage="Cannot create btc,lite and doge wallet";
+						$errormessage="Cannot create wallet";
 					}
 					
 				}else{
