@@ -21,9 +21,9 @@ Set up the configuration of your email server (to enable users reset password) i
 
 ### Usage:
 
-Sent up the data base tables ...
+Sent up the data base tables [Stellarswapdbtables](https://github.com/jonasess/Stellarswap/blob/master/stellardbswap.sql)
 
-Set up your database connection in this directory ``` include/dbconnection.php ```
+Set up your database connection configuration in this directory ``` include/dbconnection.php ```
 
 Run ..
 ### Add new Stellar token:
@@ -49,8 +49,47 @@ array("domain"=>"your-domain-name","logo"=>"Asset-logo-direction","code"=>"Asset
 And congratulations your asset has been added to the board for the trading.
 
 ### Add new cryptocurrency (coin):
-Details soon.
-Hint you need to use rpc to connect to daemons.
+To add new coin like (BTC,LTC ... etc) follow the following steps:
+1. Go to logo folder and add your coin logo.png there.
+2. Add new row in your database (stellarswapbdtables) [stellardbswap.sql](https://github.com/jonasess/Stellarswap/blob/master/stellardbswap.sql#L40)
+Fro example you want to add litcoin . add new row named stlitcoinkey in the table stellarswapusers.
+3. Go to this file [stellarSwap-checking.php](https://github.com/jonasess/Stellarswap/blob/master/stellarSwap-checking.php#L44)
+ and add the information of your coin, as an example:
+``` array("logo"=>"logo/litcoin.png","code"=>"LTC","swcoinkey"=>$row["stlitcoinkey"]) ```
+4. Go to this file [include/rpcdaemonpassword.php](https://github.com/jonasess/Stellarswap/blob/master/include/rpcdaemonpassword.php#L16) add these lines of your new coin(it's really required to connect your website to your coin daemon via rpc).as example for litcoin
+```
+else{
+if($coincode=="LTC"){
+	$coinrpcuser='rpcuser';
+	$coinrpcpassword='rpcpassword';
+	$coinrpcip='ip address where litcoin daemon is running';
+	$coinrpcport='rpcport';
+	}
+}
+```
+Also add in the same file here [include/rpcdaemonpassword.php](https://github.com/jonasess/Stellarswap/blob/master/include/rpcdaemonpassword.php#L29) these lines which is related to the passphrase (it's really required for the permissions later on in transactions). As an example for litcoin:
+```
+else{
+if($coincode=="LTC"){
+	$passphrase='your passphrase';
+	}
+}
+```
+5. Go to this file [stellarSwap-signin-account.php](https://github.com/jonasess/Stellarswap/blob/master/stellarSwap-signin-account.php#L88) and add these lines to allow the new users to get new address for your new added coin. let's take LTC as an example here:
+```
+$litcoinconnectionrpc=initconnectionrpc("GCH");
+$litcoinkey=$litcoinconnectionrpc->getnewaddress("litcoin".$_POST["email"]);
+```
+then add it to data base
+```
+if ($stmt = $conn->prepare("INSERT INTO stellarswapusers (swemail,swpassword,swsecretkey,
+         swpublickey,swbtccoinkey,swgalaxycashcoinkey,stlitcoinkey) VALUES (?, ?, ?, ?, ?, ?,?)")) 
+$stmt->bind_param("sssssss", $email, $password, $sek, $pbk, $btcoinkey, $galaxycashkey,$litcoinkey);
+```
+
+6. Finally go to this file [updateusertable/updateoncoinadd.php](https://github.com/jonasess/Stellarswap/blob/master/updateusertable/updateoncoinadd.php)
+And add your new coin configuration (litcoin as an example) and run it.
+It's really important to do this last step because it will add automatically new litcoin address for example to your users who are already registered in your website befor adding the new coin .
 
 ### Note:
 Stellarswap uses the rpc to connect to daemon to support any coin (BTC, GCH ...etc).
