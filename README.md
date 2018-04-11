@@ -52,7 +52,7 @@ And congratulations your asset has been added to the board for the trading.
 To add new coin like (BTC,LTC ... etc) follow the following steps:
 1. Go to logo folder and add your coin logo.png there.
 2. Add new row in your database (stellarswapbdtables) [stellardbswap.sql](https://github.com/jonasess/Stellarswap/blob/master/stellardbswap.sql#L40)
-For example you want to add litcoin . add new row named stlitcoinkey in the table stellarswapusers.
+For example you want to add litcoin . add new row named ``` stlitcoinkey ``` in the table stellarswapusers.
 3. Go to this file [stellarSwap-checking.php](https://github.com/jonasess/Stellarswap/blob/master/stellarSwap-checking.php#L44)
  and add the information of your coin, as an example:
 ``` array("logo"=>"logo/litcoin.png","code"=>"LTC","swcoinkey"=>$row["stlitcoinkey"]) ```
